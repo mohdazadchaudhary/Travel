@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:id="@+id/txt"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="3dp"
+        android:gravity="center"
+        android:text="@string/anime_photos_app"
+        android:textSize="25sp"
+        android:textStyle="bold" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/Conlay"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <!-- Single ImageView to display images dynamically -->
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:contentDescription="@string/anime_image"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/imgDep"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:srcCompat="@drawable/pic0" />
+
+        <TextView
+            android:id="@+id/imgDep"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Tomioka Giyu"
+            android:textStyle="bold"
+            android:textColor="#fff"
+            android:gravity="center"
+            android:background="#000"
+            app:layout_constraintTop_toBottomOf="@id/imageView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <ImageButton
+            android:id="@+id/back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/previous"
+            app:srcCompat="@android:drawable/ic_media_previous"
+            app:layout_constraintTop_toBottomOf="@+id/imgDep"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.2" />
+
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:backgroundTint="@android:color/transparent"
+            android:contentDescription="@string/next"
+            app:srcCompat="@android:drawable/ic_media_next"
+            app:layout_constraintTop_toBottomOf="@+id/imgDep"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintHorizontal_bias="0.8" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>

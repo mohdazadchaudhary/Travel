@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">Travel</string>
+    <string name="travel_photos_app">Travel Photos App</string>
+    <string name="anime_photos_app">Anime Photos App</string>
+    <string name="next" />
+    <string name="previous">\n</string>
+    <string name="anime_image">\n</string>
+</resources>
